@@ -35,7 +35,6 @@ namespace UserRegistration
 
             Console.WriteLine("Invalid email id!!");
         }
-        
         public void Checkmobilenum(string Mobilenum)
         {
             string mobilenumpattern = "^[1,9]{2}-[6-9]{1}[0-9]{9}";
@@ -44,9 +43,17 @@ namespace UserRegistration
             else
                 Console.WriteLine("Invalid mobile number!!");
         }
+        public void Checkpassward(string Passward)
+        {
+            string passwardpattern = "^[A-Za-z0-9]{8,20}$";
+            if (Regex.IsMatch(Passward, passwardpattern))
+                Console.WriteLine("Passward is valid");
+            else
+                Console.WriteLine("Invalid passward!!");
+        }
 
     }
 }
 
-    
+
 
